@@ -2,6 +2,8 @@ describe('Assertions Demo', ()=>{           //describe clock
 
     it("Implicit Assertions",()=>{  //it block
 
+        // Positive Assertions
+
         cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
         // should and are the implicit assertion keywords
 
@@ -22,7 +24,17 @@ cy.url().should('include','auth/login')
        
         .should('contain','orange');
         
+                // Using single statement and comparing multiple times using and keyword
 
+
+        cy.url().should('include','auth/login')
+         
+         .and('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+       
+        .and('contain','orange');
+
+
+        
 
     })
 })

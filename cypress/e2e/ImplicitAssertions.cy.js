@@ -14,13 +14,22 @@ describe('Assertions Demo', ()=>{           //describe clock
         //This keyword works very similar to include keyword
 
         
-// Using single statement and comparing multiple times 
+// Using single statement and comparing multiple times using should keyword
 
-cy.url().should('include','auth/login')
+// cy.url().should('include','auth/login')
          
-         .should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+//          .should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
        
-        .should('contain','orange');
+//         .should('contain','orange');
+
+        // Using single statement and comparing multiple times using and keyword
+
+
+        cy.url().should('include','auth/login')
+         
+         .and('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+       
+        .and('contain','orange');
         
 
 
