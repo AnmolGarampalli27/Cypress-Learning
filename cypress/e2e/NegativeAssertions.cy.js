@@ -1,11 +1,16 @@
-describe('Assertions Demo', ()=>{           //describe clock
+/** @format */
 
-    it("Implicit Assertions",()=>{  //it block
+describe("Assertions Demo", () => {
+  //describe clock
 
-        cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
-        // should and are the implicit assertion keywords
+  it("Implicit Assertions", () => {
+    //it block
 
-        cy.url().should('not.contain', 'orangee');
+    cy.visit(
+      "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    );
+    // should and are the implicit assertion keywords
 
-    })
-})
+    cy.url().should("not.contain", "orangee");
+  });
+});
