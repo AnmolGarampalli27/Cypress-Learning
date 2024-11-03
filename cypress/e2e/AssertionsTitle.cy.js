@@ -28,5 +28,9 @@ describe( "Assertions Tutorial", ()=>{
         //Optimizing the above code
         .should('have.value','Admin')
 
+        cy.get("input[placeholder='Password']").type("admin123")
+
+        cy.get("button[type='submit']").click();
+
     })
 })
